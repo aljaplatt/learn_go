@@ -21,11 +21,22 @@ var numOne int8 = 25
 // var numOne int8 = 215 
 // var numTwo int8 = -129
 
-// uint must be a positive number 
+// uint must be a positive number - unsigned integer 
 var numThree uint = 25
 // error
 // var numThree uint = -25
 //? uint8 - as it cannot be negative you can have a larger positive num - upto 255 
-var numThreeAgain uint8 = 25
+var numThreeAgain uint8 = 255
+
+fmt.Println(numOne, numThree, numThreeAgain)
+
+//* Floats - must specify bit size
+
+var floatOne float32 = 25.98
+// float64 more precise - default, if you use := float64 will be inferred
+var floatTwo float64 = 250989820398329845.98
+floatThree := 2.3
+
+fmt.Println(floatOne, floatTwo, floatThree)
 }
 
