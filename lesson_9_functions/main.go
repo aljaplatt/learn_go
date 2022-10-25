@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math"
 )
-
+// n is the param and it will be a string
 func sayGreeting(n string) {
 	fmt.Printf("Good morning %v \n", n)
 }
@@ -19,6 +19,7 @@ func cycleNames(n []string, f func(string)) {
 	}
 }
 
+// the second float64 is the return tag, the type you want to return 
 func circleArea(r float64) float64 {
 	return math.Pi * r * r
 }
