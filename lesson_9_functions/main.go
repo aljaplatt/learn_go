@@ -19,7 +19,7 @@ func cycleNames(n []string, f func(string)) {
 	}
 }
 
-// the second float64 is the return tag, the type you want to return 
+//? if you want to return something you must specify what its type will be. the second float64 is the return tag, the type you want to return 
 func circleArea(r float64) float64 {
 	return math.Pi * r * r
 }
