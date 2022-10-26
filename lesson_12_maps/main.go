@@ -13,6 +13,7 @@ func main() {
 	}
 
 	fmt.Println(menu)
+	// "pie" - key
 	fmt.Println(menu["pie"])
 
 	// looping maps

@@ -1,4 +1,9 @@
-package main
+// package main
+
+//* pointers are a data type themselves and when we create them they're stored in their own memory location.
+//? they point to another memory location  
+//todo - we can manually create pointers for non pointer values - strings, ints, etc. 
+//? WHY? -  
 
 import "fmt"
 
