@@ -3,6 +3,8 @@ package main
 import "fmt"
 
 func main() {
+
+	//? keys must be all one data type, values should all be same value
 	menu := map[string]float64{
 		"soup":           4.99,
 		"pie":            7.99,
@@ -14,6 +16,7 @@ func main() {
 	fmt.Println(menu["pie"])
 
 	// looping maps
+	// k - key, v - value
 	for k, v := range menu {
 		fmt.Println(k, "-", v)
 	}
