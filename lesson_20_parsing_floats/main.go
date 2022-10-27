@@ -36,11 +36,17 @@ func promptOptions(b bill) {
 		name, _ := getInput("Item name: ", reader)
 		price, _ := getInput("Item price: ", reader)
 
+		//todo convert string to float using strconv
+		// p = price.  err if value cannot be parsed 
+		//? 1. thing we want parsed - price.  2. num of bits - 64
 		p, err := strconv.ParseFloat(price, 64)
+		//! if err, 
 		if err != nil {
 			fmt.Println("The price must be a number...")
+			// start again
 			promptOptions(b)
 		}
+		//? if no err, err = nil 
 		b.addItem(name, p)
 
 		fmt.Println("item added -", name, price)
