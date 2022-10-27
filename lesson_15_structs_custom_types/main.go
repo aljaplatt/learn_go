@@ -1,5 +1,6 @@
 package main
 
+// struct is like a class
 import "fmt"
 
 func main() {
