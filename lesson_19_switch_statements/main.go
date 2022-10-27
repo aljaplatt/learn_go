@@ -7,6 +7,7 @@ import (
 	"strings"
 )
 
+// why error? is this returned from ReadString method? 
 func getInput(prompt string, r *bufio.Reader) (string, error) {
 	fmt.Print(prompt)
 	input, err := r.ReadString('\n')
@@ -26,6 +27,7 @@ func createBill() bill {
 }
 
 func promptOptions(b bill) {
+	// getInput returns the user input which we store in vars
 	reader := bufio.NewReader(os.Stdin)
 
 	opt, _ := getInput("Choose option (a - add item, s - save bill, t - add tip): ", reader)
@@ -42,8 +44,10 @@ func promptOptions(b bill) {
 		fmt.Println(tip)
 	case "s":
 		fmt.Println("you chose to save the bill")
+	// default fired if a, t or s isn't the opt
 	default:
 		fmt.Println("That was not a valid option...")
+		// recall function
 		promptOptions(b)
 	}
 }
