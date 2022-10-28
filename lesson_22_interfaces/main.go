@@ -5,7 +5,9 @@ import (
 	"math"
 )
 
-// shape interface
+// interface groups types together based on their methods
+
+// shape interface - to be considered a shape, structs must have the methods specified - area() and circumf()
 type shape interface {
 	area() float64
 	circumf() float64
@@ -34,6 +36,7 @@ func (c circle) circumf() float64 {
 	return 2 * math.Pi * c.radius
 }
 
+// both square and circle meet the shape criteria, so both could be passed in
 func printShapeInfo(s shape) {
 	fmt.Printf("area of %T is: %0.2f \n", s, s.area())
 	fmt.Printf("circumference of %T is: %0.2f \n", s, s.circumf())

@@ -53,10 +53,15 @@ func (b *bill) updateTip(tip float64) {
 }
 
 // save bill
+// receiver fn - take in bill 
 func (b *bill) save() {
+	// turn formatted string into a byte slice to save to a txt file 
 	data := []byte(b.format())
+	// 3args - 1. location to save 2. data to save 3. permissions
+	//! returns err if there is one
 	err := os.WriteFile("bills/"+b.name+".txt", data, 0644)
 	if err != nil {
+		// panic() - stops flow of programme and print err 
 		panic(err)
 	}
 	fmt.Println("Bill saved to file")
